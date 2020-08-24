@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #F3EBF6;
+        }
+
+        .topBar {
+            position: relative;
+            top: 0px;
+            width: 99.8%;
+            height: 15%;
+            background-color: white;
+            text-align: center;
+            border-radius: 10px;
+            border: 2px solid purple;
+        }
+
+        .home {
+            color: purple;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 40px;
+            text-decoration: none;
+        }
+
+        .product {
+            border: 2px solid purple;
+            display: inline-block;
+        }
+
+        #margin {
+            margin: 2% 8% 2% 15%;
+        }
+
+        #margin3 {
+            margin: 2% 0% 2% 2%;
+        }
+
+        img {
+            width: 310px;
+            height: 310px;
+        }
+
+        a {
+            color: purple;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .sepet {
+            z-index: 999;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            left: 95%;
+            top: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/shoppingCart"><img class="sepet" src="/images/sepet.png" alt="sepet"></a>
+    <div class="topBar">
+        <ul><a class="home" href="./home">Home</a></ul>
+    </div>
+
+    {{#each result}}
+    <div class="product" id="margin">
+        <img src="{{url}}" alt="smiley face"><br>
+        <a href="/showProduct/{{id}}/{{quantity}}">{{name}}--{{price}}</a>
+    </div>
+    {{/each}}
+
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Shopping Cart</title>
+	<style type="text/css">
+		body {
+			margin: 0px;
+			background-color: #F3EBF6;
+		}
+
+		.imgbar {
+			display: inline-block;
+			width: 99%;
+			height: 30%;
+			border: 2px solid purple;
+
+		}
+
+		img {
+			margin-top: 15px;
+			width: 270px;
+			height: 270px;
+			border-radius: 10px;
+			border: 2px solid purple;
+			margin-left: 30px;
+			display: inline-block;
+
+		}
+
+		.pass {
+			margin-top: 15px;
+			color: rgb(38, 50, 56);
+			font-weight: 700;
+			font-size: 14px;
+			letter-spacing: 1px;
+			background: rgba(136, 126, 126, 0.04);
+			padding: 10px 20px;
+			border: none;
+			border-radius: 20px;
+			outline: none;
+			box-sizing: border-box;
+			border: 2px solid rgba(0, 0, 0, 0.02);
+			margin-left: 46px;
+			text-align: center;
+			font-family: 'Ubuntu', sans-serif;
+		}
+
+
+		.submit {
+			cursor: pointer;
+			border-radius: 5em;
+			color: #fff;
+			background: linear-gradient(to right, #9C27B0, #E040FB);
+			border: 0;
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			font-family: 'Ubuntu', sans-serif;
+			margin-left: 18%;
+			font-size: 13px;
+			box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+		}
+
+		.home {
+			z-index: 999;
+			width: 60px;
+			height: 60px;
+			position: absolute;
+			left: 92%;
+			top: 1%;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="body">
+		<a href="/home"><img class="home" src="/images/home.png" alt="home"></a>
+		{{#each result}}
+
+
+		<div style="display:inline-block">
+
+			<a href="/Controller_shoppingCart/{{id}}">Delete</a>
+			<br>
+
+
+
+			<div class='img'>
+				<img src="{{url}}">
+				<p>
+					<p>Price : {{price}} TL</p>
+				</p>
+			</div>
+
+		</div>
+		{{/each}}
+
+		<div class="main">
+			<form action="/Controller_Payment" method="get" class="form1">
+				<br>
+				<input class="pass" type="text" align="center" placeholder="Name and Surname" name="pname">
+				<br>
+				<input class="pass" type="text" align="center" placeholder="Credit Card Number" name="creditcart">
+				<br>
+				<input class="pass" type="text" align="center" placeholder="Cvc Code" name="cvc">
+				<br>
+				<input class="pass" type="text" align="center" placeholder="Month" name="month">
+				<input class="pass" type="text" align="center" placeholder="Year" name="year">
+
+				<input type="submit" class="submit" align="center" value="Pay">
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
