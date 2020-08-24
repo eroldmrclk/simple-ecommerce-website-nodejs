@@ -1,5 +1,5 @@
 # simple-ecommerce-website-nodejs
-*This application is an e-commerce website application. The main software language is `Nodejs` and `express`, `express-session`, `express-handlebars`, `body-parser`, `mongodb` have been used. On the database side, `MongoDB` is preferred.*
+*This application is an e-commerce website application. The main software language is `Node.js` and `express`, `express-session`, `express-handlebars`, `body-parser`, `mongodb` have been used. On the database side, `MongoDB` is preferred.*
 
 ## Purpose of Application
 *The purpose of this application is to make an e-commerce site so that customers can buy products. It is a successful project in general and some design additions may be required.*
